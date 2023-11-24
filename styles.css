@@ -1,0 +1,113 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #24292e; /* Darker blue-gray background */
+    color: #ffffff; /* White text color */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #32383e; /* Blue-gray background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    border-radius: 12px; /* Rounded corners */
+}
+
+header {
+    background: #0366d6; /* Blue background */
+    color: #ffffff; /* White text color */
+    text-align: center;
+    padding: 1em;
+    border-radius: 12px 12px 0 0; /* Rounded corners only at the top */
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em; /* Larger font size */
+}
+
+.contact, .fade-in {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #394048; /* Darker blue-gray background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    border-radius: 12px; /* Rounded corners */
+    opacity: 0; /* Start with elements hidden */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Adding transition effects */
+}
+
+.contact:hover, .fade-in:hover {
+    transform: scale(1.05); /* Enlarge the section on hover */
+}
+
+.contact.visible, .fade-in.visible {
+    opacity: 1; /* Fade in elements on scroll */
+}
+
+h2 {
+    color: #ffffff; /* White text color */
+    font-size: 1.5em; /* Larger font size */
+}
+
+h3 {
+    color: #61dafb; /* Lighter blue text color */
+}
+
+a {
+    color: #61dafb; /* Lighter blue text color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Modern Icons Styling with Hover Effects */
+.icon {
+    font-size: 2em;
+    margin-right: 10px;
+    color: #61dafb; /* Lighter blue color for icons */
+    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.2); /* Enlarge the icon on hover */
+    font-size: 2.2em; /* Increase font size on hover */
+}
+
+/* Tooltip Styling */
+[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+}
+
+[data-tooltip]::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: #333333; /* Tooltip background color */
+    color: #ffffff; /* Tooltip text color */
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+[data-tooltip]:hover::before {
+    opacity: 1;
+}
+
+/* Grid Layout for Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+}
